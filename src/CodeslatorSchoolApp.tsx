@@ -1,4 +1,8 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import {
+  Button,
+  Typography
+} from '@mui/material';
 import logo from './logo.svg'
 import './App.css'
 
@@ -11,13 +15,13 @@ function CodeslatorSchoolApp() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
+          <Button type="button" variant="outlined" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
-          </button>
+          </Button>
         </p>
-        <p>
+        <Typography variant="subtitle1">
           Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
+        </Typography>
         <p>
           <a
             className="App-link"
