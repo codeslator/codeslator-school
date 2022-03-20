@@ -1,48 +1,19 @@
-import { useState } from 'react';
-import {
-  Button,
-  Typography
-} from '@mui/material';
-import logo from './logo.svg'
-import './App.css'
+import { ThemeProvider } from '@emotion/react';
+import { CssBaseline } from '@mui/material';
+import { Provider } from 'react-redux';
+import { Router } from './router/Router';
+import { store } from './store';
+import { defaultTheme } from './views/assets/themes/index';
 
 function CodeslatorSchoolApp() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <Button type="button" variant="outlined" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </Button>
-        </p>
-        <Typography variant="subtitle1">
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </Typography>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <ThemeProvider theme={defaultTheme}>
+      <Provider store={store}>
+        <CssBaseline />
+        <Router />
+      </Provider>
+    </ThemeProvider>
   )
 }
 
