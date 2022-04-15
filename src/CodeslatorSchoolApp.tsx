@@ -6,14 +6,13 @@ import { store } from './store';
 import { defaultTheme } from './views/assets/themes/index';
 
 function CodeslatorSchoolApp() {
-
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <Provider store={store}>
+    <Provider store={store}>
+      <ThemeProvider theme={defaultTheme}>
         <CssBaseline />
         <Router />
-      </Provider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </Provider>
   )
 }
 
