@@ -3,7 +3,7 @@ import { lightPalette } from './lightPalette'
 import { darkPalette } from './darkPalette';
 import { Montserrat } from '../fonts';
 import { Localization, esES, enUS } from '@mui/material/locale';
-import RalewayRegulatTtf from '../fonts/raleway/Raleway-Regular.ttf'
+// import RalewayRegulatTtf from '../fonts/raleway/Raleway-Regular.ttf'
 
 export const switchPaletteMode = (mode: PaletteMode) => ({
   palette: {
@@ -27,5 +27,8 @@ export const defaultTheme = createTheme({
       },
     },
   },
-  ...switchPaletteMode('light')
+  palette: {
+    mode: 'light',
+    ...(lightPalette),
+  },
 });

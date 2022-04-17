@@ -9,7 +9,6 @@ import {
 import { SideBar } from "./SideBar";
 import { NavBar } from "./NavBar";
 import { defaultTheme } from "../../assets/themes";
-// import { useTheme } from "@emotion/react";
 
 export const Header: FC = () => {
   const matches = useMediaQuery(defaultTheme.breakpoints.up('md'));
