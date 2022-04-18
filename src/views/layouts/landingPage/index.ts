@@ -1,3 +1,12 @@
+import {
+  Facebook,
+  Instagram,
+  // WhatsApp,
+  Twitter,
+  YouTube,
+  AppRegistration,
+  Login
+} from '@mui/icons-material';
 import { Nav } from "../../../interfaces";
 
 export const sectionNavigation: Nav[] = [
@@ -32,11 +41,62 @@ export const authNavigation: Nav[] = [
   {
     name: 'Log In',
     to: '/sign-in',
-    // Icon: ''
+    Icon: Login
   },
   {
     name: 'Register',
-    to: '/sign-in',
-    // Icon: ''
+    to: '/sign-up',
+    Icon: AppRegistration
   }
+];
+
+export const footerSection: Nav[] = [
+  {
+    name: 'Link 1',
+    to: '/test',
+    // Icon: ''
+  },
+  {
+    name: 'Link 2',
+    to: '/test',
+    // Icon: ''
+  },
+  {
+    name: 'Link 3',
+    to: '/test',
+    // Icon: ''
+  },
+  {
+    name: 'Link 4',
+    to: '/test',
+    // Icon: ''
+  },
+  {
+    name: 'Link 5',
+    to: '/test',
+    // Icon: ''
+  },
+];
+
+export const socialLinks: Nav[] = [
+  {
+    name: 'Facebook',
+    to: '/test',
+    Icon: Facebook
+  },
+  {
+    name: 'Twitter',
+    to: '/test',
+    Icon: Twitter
+  },
+  {
+    name: 'Instagram',
+    to: '/test',
+    Icon: Instagram
+  },
+  {
+    name: 'YouTube',
+    to: '/test',
+    Icon: YouTube
+  },
 ]

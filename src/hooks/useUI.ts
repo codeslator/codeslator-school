@@ -6,7 +6,6 @@ import { TOGGLE_BACKDROP, TOGGLE_DRAWER, TOGGLE_MODAL } from "../store/modules/u
 const useUI = () => {
   const { openDrawer, openBackdrop, openModal } = useAppSelector(selectUIState);
   const dispatch = useAppDispatch()
-  // const [mode, setMode] = useState<string>()
 
   const toggleDrawer = () => {
     dispatch(TOGGLE_DRAWER())

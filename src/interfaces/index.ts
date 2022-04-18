@@ -19,5 +19,5 @@ export interface RouteChild {
 export interface Nav {
   name: string;
   to: string;
-  Icon?: JSX.Element
+  Icon?: JSX.Element | any;
 }
