@@ -1,10 +1,13 @@
 import { FC } from "react"
 import { Typography } from "@mui/material"
+import Hero from "../components/modules/website/Hero";
+import Features from "../components/modules/website/Features";
 
 const WebsitePage: FC = () => {
   return (
     <>
-      <Typography variant="h6">Hello world</Typography>
+      <Hero />
+      <Features />
     </>
   )
 };

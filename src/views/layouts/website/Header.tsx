@@ -11,10 +11,10 @@ import { SideBar, NavBar } from './';
 
 const Header: FC = () => {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up('md'));
+  const matches = useMediaQuery(theme.breakpoints.up('lg'));
 
   return (
-    <AppBar position="static" component="header">
+    <AppBar position="fixed" component="header">
       <Toolbar>
         <Box display="flex" flexDirection="row" justifyContent="space-between" width="100%" alignItems="center">
           <Typography variant="h6" component="div" >

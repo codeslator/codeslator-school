@@ -8,9 +8,7 @@ const LandingPageLayout: FC = () => {
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header />
       <main>
-        <Container maxWidth="xl" sx={{ py: 2 }}>
-          <Outlet />
-        </Container>
+        <Outlet />
       </main>
       <Footer />
     </Box>

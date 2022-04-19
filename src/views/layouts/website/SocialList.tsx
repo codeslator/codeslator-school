@@ -31,6 +31,7 @@ const SocialList: FC<SocialListProps> = ({ title, subtitle, links }) => {
               href={to}
               target="_blank"
               rel="noopener"
+              size="large"
             >
               <Icon fontSize="large" />
             </IconButton>

@@ -29,7 +29,7 @@ const Footer: FC = () => {
             <FooterList title="Some links goes here." links={footerSection} />
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6}>
-            <SocialList title="Maybe social media here" subtitle="Hello world" links={socialLinks} />
+            <SocialList title="Maybe social media here" links={socialLinks} />
           </Grid>
           <Grid item xs={12} sm={12} md={3} lg={3}>
             <FooterList title="Some links goes here." links={footerSection} />

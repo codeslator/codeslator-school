@@ -56,11 +56,6 @@ export const footerSection: Nav[] = [
     to: '/test',
     // Icon: ''
   },
-  {
-    name: 'Link 5',
-    to: '/test',
-    // Icon: ''
-  },
 ];
 
 export const socialLinks: Nav[] = [
