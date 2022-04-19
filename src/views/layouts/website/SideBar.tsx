@@ -4,7 +4,8 @@ import { Divider, Drawer, IconButton, List, ListItem, ListItemSecondaryAction, L
 import { makeStyles } from '@mui/styles';
 import { Close, Menu } from '@mui/icons-material';
 import useUI from '../../../hooks/useUI';
-import { sectionNavigation, authNavigation } from './';
+import { sectionNavigation } from './navigation';
+import { authNavigation } from '../auth/navigation';
 
 const useStyles = makeStyles({
   root: {
@@ -12,7 +13,7 @@ const useStyles = makeStyles({
   }
 });
 
-export const SideBar: FC = () => {
+const SideBar: FC = () => {
   const classes = useStyles();
   const { openDrawer, toggleDrawer } = useUI();
 
@@ -59,5 +60,7 @@ export const SideBar: FC = () => {
         </List>
       </Drawer>
     </>
-  )
-}
+  );
+};
+
+export default SideBar;

@@ -5,12 +5,10 @@ import {
   Divider,
   Grid,
 } from '@mui/material';
-import { footerSection, socialLinks } from './index';
-import { SocialList } from './SocialList';
-import { FooterList } from './FooterList';
-import { Copyright } from './Copyright';
+import { footerSection, socialLinks } from './navigation';
+import { SocialList, FooterList, Copyright } from './';
 
-export const Footer: FC = () => {
+const Footer: FC = () => {
 
   return (
     <Box
@@ -43,3 +41,5 @@ export const Footer: FC = () => {
     </Box>
   );
 };
+
+export default Footer;

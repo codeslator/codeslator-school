@@ -7,7 +7,7 @@ interface FooterListProps {
   links: Nav[];
 };
 
-export const FooterList: FC<FooterListProps> = ({ title, links }) => {
+const FooterList: FC<FooterListProps> = ({ title, links }) => {
   return (
     <Grid container spacing={2}>
       {title && (
@@ -27,7 +27,7 @@ export const FooterList: FC<FooterListProps> = ({ title, links }) => {
         >
           {links.map(({ name, to }) => (
             <Box component="li" textAlign="center">
-              <Link color="secondary" underline="none">{name}</Link>
+              <Link href={to} color="secondary" underline="none">{name}</Link>
             </Box>
           ))}
         </Box>
@@ -35,3 +35,5 @@ export const FooterList: FC<FooterListProps> = ({ title, links }) => {
     </Grid>
   );
 };
+
+export default FooterList;

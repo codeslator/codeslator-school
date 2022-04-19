@@ -1,10 +1,10 @@
 import { FC } from 'react'
 import { Box, Button } from '@mui/material'
 import { NavLink } from "react-router-dom"
-import { sectionNavigation, authNavigation } from './';
+import { sectionNavigation } from './navigation';
+import { authNavigation } from '../auth/navigation';
 
-export const NavBar: FC = () => {
-
+const NavBar: FC = () => {
   return (
     <>
       <Box>
@@ -37,5 +37,7 @@ export const NavBar: FC = () => {
         ))}
       </Box>
     </>
-  )
-}
+  );
+};
+
+export default NavBar;

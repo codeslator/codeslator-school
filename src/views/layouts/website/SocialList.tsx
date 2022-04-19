@@ -8,7 +8,7 @@ interface SocialListProps {
   links: Nav[];
 }
 
-export const SocialList: FC<SocialListProps> = ({ title, subtitle, links }) => {
+const SocialList: FC<SocialListProps> = ({ title, subtitle, links }) => {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
@@ -45,3 +45,5 @@ export const SocialList: FC<SocialListProps> = ({ title, subtitle, links }) => {
     </Grid>
   );
 };
+
+export default SocialList;

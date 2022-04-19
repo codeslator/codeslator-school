@@ -4,8 +4,6 @@ import {
   // WhatsApp,
   Twitter,
   YouTube,
-  AppRegistration,
-  Login
 } from '@mui/icons-material';
 import { Nav } from "../../../interfaces";
 
@@ -35,19 +33,6 @@ export const sectionNavigation: Nav[] = [
     to: '#testimonials',
     // Icon: ''
   },
-];
-
-export const authNavigation: Nav[] = [
-  {
-    name: 'Log In',
-    to: '/sign-in',
-    Icon: Login
-  },
-  {
-    name: 'Register',
-    to: '/sign-up',
-    Icon: AppRegistration
-  }
 ];
 
 export const footerSection: Nav[] = [
@@ -99,4 +84,4 @@ export const socialLinks: Nav[] = [
     to: '/test',
     Icon: YouTube
   },
-]
+];

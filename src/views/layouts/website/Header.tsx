@@ -7,10 +7,9 @@ import {
   useMediaQuery,
   useTheme
 } from "@mui/material";
-import { SideBar } from "./SideBar";
-import { NavBar } from "./NavBar";
+import { SideBar, NavBar } from './';
 
-export const Header: FC = () => {
+const Header: FC = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('md'));
 
@@ -27,3 +26,5 @@ export const Header: FC = () => {
     </AppBar>
   );
 };
+
+export default Header;

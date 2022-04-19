@@ -1,8 +1,7 @@
 import { FC } from 'react'
 import { Box, Container } from '@mui/material';
 import { Outlet } from 'react-router-dom'
-import { Footer } from './landingPage/Footer'
-import { Header } from './landingPage/Header'
+import { Footer, Header } from './website'
 
 const LandingPageLayout: FC = () => {
   return (
