@@ -40,13 +40,13 @@ const Hero: FC = () => {
             <Container maxWidth="xl">
               <Typography variant="h3" color="secondary" gutterBottom>¿Necesitas un profesor?</Typography>
               <Typography variant="h5" gutterBottom>Te ayudamos a agendar fácilmente una clase On-line con los mejores profesores.</Typography>
-              <Button component={Link} to="/register" variant="contained" color="primary" size="large">Comenzar Ahora</Button>
+              <Button component={Link} to="/sign-up" variant="contained" color="secondary" size="large">Comenzar Ahora</Button>
             </Container>
           </Grid>
           {breakpoint && (
             <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
               <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                <img src={Meeting} alt="meeting" width="90%" />
+                <Image src={Meeting} alt="meeting" width="90%" />
               </Box>
             </Grid>
           )}

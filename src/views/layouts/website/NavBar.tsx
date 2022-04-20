@@ -27,8 +27,9 @@ const NavBar: FC = () => {
             component={NavLink}
             to={to}
             key={to}
-            variant="outlined"
-            color="inherit"
+            variant="contained"
+            color="secondary"
+            // color="inherit"
             sx={{ mx: .5 }}
             endIcon={<Icon />}
           >
