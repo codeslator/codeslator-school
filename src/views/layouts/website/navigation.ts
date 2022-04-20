@@ -18,19 +18,19 @@ export const sectionNavigation: Nav[] = [
     to: '#services',
     // Icon: ''
   },
-  {
+  /* {
     name: 'Blog',
     to: '#blog',
+    // Icon: ''
+  }, */
+  {
+    name: 'Testimonials',
+    to: '#testimonials',
     // Icon: ''
   },
   {
     name: 'Contact',
     to: '#contact',
-    // Icon: ''
-  },
-  {
-    name: 'Testimonials',
-    to: '#testimonials',
     // Icon: ''
   },
 ];
