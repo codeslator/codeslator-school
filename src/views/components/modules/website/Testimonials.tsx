@@ -1,8 +1,15 @@
 import { FC } from 'react';
-import { Box, Container, Grid, Typography, Paper } from '@mui/material';
-import Carousel from 'react-material-ui-carousel';
+import { Box, Container, Grid, Typography, useTheme, useMediaQuery } from '@mui/material';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import { testimonialsSection } from './data';
+import TestimonialCard from './TestimonialCard';
 
 const Testimonials: FC = () => {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down('md'));
   return (
     <Box component="section" id="#testimonials" sx={{ mb: 5 }}>
       <Container maxWidth="lg">
@@ -16,13 +23,24 @@ const Testimonials: FC = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid container spacing={2} sx={{ my: 2 }}>
-          <Carousel>
-            <Box width="200px" height="200px">Hola</Box>
-            <Box width="200px" height="200px">Hola</Box>
-            <Box width="200px" height="200px">Hola</Box>
-          </Carousel>
-        </Grid>
+        <Box sx={{ my: 2 }}>
+          <Swiper
+            slidesPerView={matches ? 1 : 3}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+            loop
+          >
+            {testimonialsSection.map((testimonial, index) => (
+              <SwiperSlide key={index}>
+                <TestimonialCard testimonial={testimonial} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Box>
       </Container>
     </Box>
   );
