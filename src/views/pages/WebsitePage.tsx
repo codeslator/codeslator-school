@@ -3,6 +3,7 @@ import Hero from "../components/modules/website/Hero";
 import Features from "../components/modules/website/Features";
 import Services from "../components/modules/website/Services";
 import Testimonials from "../components/modules/website/Testimonials";
+import Contact from '../components/modules/website/Contact';
 
 const WebsitePage: FC = () => {
   return (
@@ -11,6 +12,7 @@ const WebsitePage: FC = () => {
       <Features />
       <Services />
       <Testimonials />
+      <Contact />
     </>
   )
 };

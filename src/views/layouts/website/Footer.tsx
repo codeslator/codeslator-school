@@ -20,7 +20,7 @@ const Footer: FC = () => {
         width: '100%',
         px: 2,
         py: 3,
-        mt: 'auto',
+        // mt: 'auto',
       }}
     >
       <Container maxWidth="xl" sx={{ mb: 2 }}>
