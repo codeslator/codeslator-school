@@ -1,22 +1,23 @@
 import { RouteParent } from "../../interfaces";
 import { LandingPageLayout, AuthLayout } from "../../views/layouts";
 import { SignInPage, WebsitePage, SignUpPage } from "../../views/pages";
+import { ROUTES } from './routes';
 
 export const routes: RouteParent[] = [
   {
-    path: '/',
+    path: ROUTES.ROOT,
     Layout: LandingPageLayout,
     children: [
-      { to: 'root', path: '', Component: WebsitePage }
+      { path: ROUTES.ROOT, Component: WebsitePage }
     ]
   },
   {
-    path: '/auth',
+    path: ROUTES.AUTH,
     Layout: AuthLayout,
     children: [
-      { to: 'sign-in', path: '/sign-in', Component: SignInPage },
-      { to: 'sign-up', path: '/sign-up', Component: SignUpPage },
+      { path: ROUTES.SIGN_IN, Component: SignInPage },
+      { path: ROUTES.SIGN_UP, Component: SignUpPage },
       // { path: '*', Component: <Navigate to="/404" /> }
     ]
   },
-]
+];
