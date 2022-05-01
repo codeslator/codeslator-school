@@ -1,5 +1,7 @@
 import { FC } from 'react';
 import { Box, Grid, IconButton, Link, Typography } from '@mui/material';
+import { v4 as uuidv4 } from 'uuid';
+
 import { Nav } from '../../../interfaces/index';
 
 interface SocialListProps {
@@ -32,6 +34,7 @@ const SocialList: FC<SocialListProps> = ({ title, subtitle, links }) => {
               target="_blank"
               rel="noopener"
               size="large"
+              key={uuidv4()}
             >
               <Icon fontSize="large" />
             </IconButton>

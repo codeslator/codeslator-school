@@ -9,6 +9,7 @@ import {
   Typography
 } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 
 interface ServiceCard {
   title: string;
@@ -49,7 +50,7 @@ const ServiceCard: FC<ServiceProp> = ({ service }) => {
         </Box>
         <Box component="ul" sx={{ listStyle: 'none' }}>
           {description.map((line) => (
-            <Typography component="li" variant="subtitle1" align="center" key={line}>
+            <Typography component="li" variant="subtitle1" align="center" key={uuidv4()}>
               {line}
             </Typography>
           ))}

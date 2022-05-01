@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { Box, Container, Grid, Typography } from '@mui/material';
+import { v4 as uuidv4 } from 'uuid';
 import { servicesSection } from './data';
 import ServiceCard from './ServiceCard';
 
@@ -18,8 +19,8 @@ const Services: FC = () => {
           </Grid>
         </Grid>
         <Grid container spacing={2} sx={{ my: 2 }} justifyContent="space-evenly">
-          {servicesSection.map((service, index) => (
-            <Grid item xs={12} sm={12} md={5} key={index}>
+          {servicesSection.map((service) => (
+            <Grid item xs={12} sm={12} md={5} key={uuidv4()}>
               <ServiceCard service={service} />
             </Grid>
           ))}

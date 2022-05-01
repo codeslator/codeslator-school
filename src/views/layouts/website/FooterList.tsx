@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { Box, Grid, Link, Typography } from '@mui/material';
+import { v4 as uuidv4 } from 'uuid';
 import { Nav } from '../../../interfaces';
 
 interface FooterListProps {
@@ -26,7 +27,7 @@ const FooterList: FC<FooterListProps> = ({ title, links }) => {
           }}
         >
           {links.map(({ name, to }) => (
-            <Box component="li" textAlign="center">
+            <Box component="li" textAlign="center" key={uuidv4()}>
               <Link href={to} color="secondary" underline="none">{name}</Link>
             </Box>
           ))}

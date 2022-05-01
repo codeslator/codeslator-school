@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Box, Container, Grid, Typography } from '@mui/material';
+import { v4 as uuidv4 } from 'uuid';
 import ContactForm from './ContactForm';
 import { contactSection } from './data';
 
@@ -21,7 +22,7 @@ const Contact: FC = () => {
             <Typography variant="h5" color="primary" fontWeight={700}>{title}</Typography>
             <Typography sx={{ mb: 3 }}>{description}</Typography>
             {contacts.map(({ data, Icon }) => (
-              <Box sx={{ display: 'flex', flexDirection: 'row', mt: 2, alignItems: 'center' }}>
+              <Box sx={{ display: 'flex', flexDirection: 'row', mt: 2, alignItems: 'center' }} key={uuidv4()}>
                 <Icon color="secondary" fontSize="large" sx={{ mr: 1 }} />
                 <Typography>{data}</Typography>
               </Box>

@@ -1,5 +1,6 @@
-import { Avatar, Box, Card, CardActions, CardContent, IconButton, Typography, Paper } from '@mui/material';
 import { FC } from 'react'
+import { Avatar, Box, Card, CardActions, CardContent, IconButton, Typography, Paper } from '@mui/material';
+import { v4 as uuidv4 } from 'uuid';
 
 interface TestimonialCardProps {
   fullName: string;
@@ -36,7 +37,7 @@ const TestimonialCard: FC<TestimonialProps> = ({ testimonial }) => {
       </CardContent>
       <CardActions sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
         {social.map(({ url, Icon }) => (
-          <IconButton href={url}>
+          <IconButton href={url} key={uuidv4()}>
             <Icon />
           </IconButton>
         ))}
