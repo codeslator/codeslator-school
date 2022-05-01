@@ -7,6 +7,9 @@ import {
   LinkedIn,
   GitHub,
   Twitter,
+  MailOutline,
+  LocationOn,
+  PhoneAndroid
 } from '@mui/icons-material';
 import Student from '../../../assets/img/Student.svg';
 import Teacher from '../../../assets/img/Teacher.svg';
@@ -201,3 +204,22 @@ export const testimonialsSection = [
     ]
   },
 ];
+
+export const contactSection = {
+  title: 'GET IN TOUCH',
+  description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim eveniet corporis, earum ab accusantium rerum laudantium non? Placeat, blanditiis maiores.',
+  contacts: [
+    {
+      Icon: MailOutline,
+      data: 'examplemail@mail.com'
+    },
+    {
+      Icon: PhoneAndroid,
+      data: '+1 (234) 56789012'
+    },
+    {
+      Icon: LocationOn,
+      data: 'Street 1 Avenue 2, 000, City, Country'
+    },
+  ]
+}

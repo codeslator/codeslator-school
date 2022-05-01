@@ -10,7 +10,7 @@ const AuthLayout: FC = () => {
       container
       component="main"
       sx={{
-        height: '100vh',
+        minHeight: '100vh',
         background: 'linear-gradient(180deg, #fd885b 70%, #fea98a 30%)',
         overflow: 'hidden',
       }}
@@ -30,9 +30,9 @@ const AuthLayout: FC = () => {
             my: 8,
             mx: 4,
             display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <Brand />

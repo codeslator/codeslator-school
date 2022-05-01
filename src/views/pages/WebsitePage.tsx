@@ -1,13 +1,13 @@
 import { FC } from "react"
-import Hero from "../components/modules/website/Hero";
-import Features from "../components/modules/website/Features";
-import Services from "../components/modules/website/Services";
-import Testimonials from "../components/modules/website/Testimonials";
-import Contact from '../components/modules/website/Contact';
+import { Helmet } from 'react-helmet';
+import { Hero, Features, Services, Testimonials, Contact } from '../components/modules/website';
 
 const WebsitePage: FC = () => {
   return (
     <>
+      <Helmet>
+        <title>CodeSchool | Learn more easy...</title>
+      </Helmet>
       <Hero />
       <Features />
       <Services />
