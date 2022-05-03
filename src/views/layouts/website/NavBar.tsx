@@ -1,14 +1,12 @@
 import { FC, useState, useEffect } from 'react'
 import { Box, Button } from '@mui/material'
 import { NavLink } from "react-router-dom"
-import { Link } from 'react-scroll'
+import { Link } from 'react-scroll';
 import { sectionNavigation } from './navigation';
 import { authNavigation } from '../auth/navigation';
 
 const NavBar: FC = () => {
   const [match, setMatch] = useState('');
-
-  // useEffect(() => setMatch(match), [match])
   
   return (
     <>

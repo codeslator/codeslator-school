@@ -1,8 +1,18 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { NavLink } from 'react-router-dom';
-import { Divider, Drawer, IconButton, List, ListItem, ListItemSecondaryAction, ListItemText } from '@mui/material';
+import {
+  Divider,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemSecondaryAction,
+  ListItemText
+} from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { Close, Menu } from '@mui/icons-material';
+import { Link } from 'react-scroll';
 import useUI from '../../../hooks/useUI';
 import { sectionNavigation } from './navigation';
 import { authNavigation } from '../auth/navigation';
@@ -16,6 +26,8 @@ const useStyles = makeStyles({
 const SideBar: FC = () => {
   const classes = useStyles();
   const { openDrawer, toggleDrawer } = useUI();
+  const [match, setMatch] = useState('');
+
 
   return (
     <>
@@ -46,14 +58,22 @@ const SideBar: FC = () => {
             </ListItemSecondaryAction>
           </ListItem>
           <Divider />
-          {sectionNavigation.map(({ name, to }) => (
-            <ListItem button component={NavLink} to={to} key={name}>
-              <ListItemText primary={name} />
-            </ListItem>
+          {sectionNavigation.map(({ name, to, Icon }) => (
+            <Link key={to} to={to} smooth spy duration={500} offset={-60} onSetActive={(route) => setMatch(route)}>
+              <ListItem button>
+                <ListItemIcon>
+                  <Icon />
+                </ListItemIcon>
+                <ListItemText primary={name} />
+              </ListItem>
+            </Link>
           ))}
           <Divider />
-          {authNavigation.map(({ name, to }) => (
+          {authNavigation.map(({ name, to, Icon }) => (
             <ListItem button component={NavLink} to={to} key={name}>
+              <ListItemIcon>
+                <Icon />
+              </ListItemIcon>
               <ListItemText primary={name} />
             </ListItem>
           ))}

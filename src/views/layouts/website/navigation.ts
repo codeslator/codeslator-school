@@ -4,19 +4,29 @@ import {
   // WhatsApp,
   Twitter,
   YouTube,
+  Home,
+  HomeRepairService,
+  RecordVoiceOver,
+  ContactMail,
 } from '@mui/icons-material';
 import { Nav } from "../../../interfaces";
+import { NAVIGATE_TO, NAVIGATE_NAME } from '../../../router/routes/routes';
 
 export const sectionNavigation: Nav[] = [
   {
-    name: 'Home',
-    to: '#home',
-    // Icon: ''
+    name: NAVIGATE_NAME.HOME,
+    to: NAVIGATE_TO.HOME,
+    Icon: Home
   },
   {
-    name: 'Services',
-    to: '#services',
-    // Icon: ''
+    name: NAVIGATE_NAME.FEATURES,
+    to: NAVIGATE_TO.FEATURES,
+    Icon: HomeRepairService
+  },
+  {
+    name: NAVIGATE_NAME.SERVICES,
+    to: NAVIGATE_TO.SERVICES,
+    Icon: HomeRepairService
   },
   /* {
     name: 'Blog',
@@ -24,14 +34,14 @@ export const sectionNavigation: Nav[] = [
     // Icon: ''
   }, */
   {
-    name: 'Testimonials',
-    to: '#testimonials',
-    // Icon: ''
+    name: NAVIGATE_NAME.TESTIMONIALS,
+    to: NAVIGATE_TO.TESTIMONIALS,
+    Icon: RecordVoiceOver
   },
   {
-    name: 'Contact',
-    to: '#contact',
-    // Icon: ''
+    name: NAVIGATE_NAME.CONTACT,
+    to: NAVIGATE_TO.CONTACT,
+    Icon: ContactMail
   },
 ];
 
