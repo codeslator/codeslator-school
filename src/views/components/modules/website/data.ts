@@ -9,7 +9,7 @@ import {
   Twitter,
   MailOutline,
   LocationOn,
-  PhoneAndroid
+  PhoneAndroid,
 } from '@mui/icons-material';
 import Student from '../../../assets/img/Student.svg';
 import Teacher from '../../../assets/img/Teacher.svg';

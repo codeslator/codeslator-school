@@ -8,6 +8,7 @@ import {
   HomeRepairService,
   RecordVoiceOver,
   ContactMail,
+  PlaylistAddCheck,
 } from '@mui/icons-material';
 import { Nav } from "../../../interfaces";
 import { NAVIGATE_TO, NAVIGATE_NAME } from '../../../router/routes/routes';
@@ -21,7 +22,7 @@ export const sectionNavigation: Nav[] = [
   {
     name: NAVIGATE_NAME.FEATURES,
     to: NAVIGATE_TO.FEATURES,
-    Icon: HomeRepairService
+    Icon: PlaylistAddCheck
   },
   {
     name: NAVIGATE_NAME.SERVICES,

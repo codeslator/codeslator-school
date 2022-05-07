@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Box, Typography } from '@mui/material';
 import { Image } from 'mui-image';
-import Logo from '../../assets/img/logo-2.png'
+import Logo from '../../assets/img/logo-color.svg';
 
 const Brand: FC = () => {
   return (
@@ -11,7 +11,7 @@ const Brand: FC = () => {
         <Image
           src={Logo}
           alt="logo"
-          width="50%"
+          width="100%"
           easing="linear"
           duration={0}
         />

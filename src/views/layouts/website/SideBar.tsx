@@ -28,7 +28,6 @@ const SideBar: FC = () => {
   const { openDrawer, toggleDrawer } = useUI();
   const [match, setMatch] = useState('');
 
-
   return (
     <>
       <IconButton
@@ -60,12 +59,12 @@ const SideBar: FC = () => {
           <Divider />
           {sectionNavigation.map(({ name, to, Icon }) => (
             <Link key={to} to={to} smooth spy duration={500} offset={-60} onSetActive={(route) => setMatch(route)}>
-              <ListItem button>
+              <ListItem button onClick={toggleDrawer}>
                 <ListItemIcon>
                   <Icon />
                 </ListItemIcon>
                 <ListItemText primary={name} />
-              </ListItem>
+              </ListItem> 
             </Link>
           ))}
           <Divider />

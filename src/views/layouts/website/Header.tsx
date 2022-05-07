@@ -3,11 +3,12 @@ import {
   AppBar,
   Box,
   Toolbar,
-  Typography,
+  // Typography,
   useMediaQuery,
   useTheme
 } from "@mui/material";
 import { SideBar, NavBar } from './';
+import Logo from '../../assets/img/logo-orange-white.svg';
 
 const Header: FC = () => {
   const theme = useTheme();
@@ -17,9 +18,9 @@ const Header: FC = () => {
     <AppBar position="fixed" component="header">
       <Toolbar>
         <Box display="flex" flexDirection="row" justifyContent="space-between" width="100%" alignItems="center">
-          <Typography variant="h6" component="div" >
-            CodeSchool
-          </Typography>
+          <Box sx={{ width: '250px' }}>
+            <img alt="logo" src={Logo} />
+          </Box>
           {matches ? (<NavBar />) : (<SideBar />)}
         </Box>
       </Toolbar>

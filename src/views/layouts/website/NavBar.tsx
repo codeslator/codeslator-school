@@ -6,17 +6,16 @@ import { sectionNavigation } from './navigation';
 import { authNavigation } from '../auth/navigation';
 
 const NavBar: FC = () => {
-  const [match, setMatch] = useState('');
+  // const [match, setMatch] = useState('');
   
   return (
     <>
       <Box>
         {sectionNavigation.map(({ name, to }) => (
-          <Link key={to} to={to} smooth spy duration={500} offset={-60} onSetActive={(route) => setMatch(route)}>
+          <Link key={to} to={to} smooth spy duration={500} offset={-60}>
             <Button
-              // href={to}
-              variant={(match === to) ? 'contained' : 'outlined'}
-              color={(match === to) ? 'secondary' : 'inherit'}
+              variant="outlined"
+              color="inherit"
               sx={{ mx: .5 }}
             >
               {name}
