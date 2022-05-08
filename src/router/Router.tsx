@@ -12,7 +12,7 @@ export const Router = () => (
     <BrowserRouter>
       <Routes>
         {routes.map(({ path: root, Layout, children }) => (
-          <Route element={<Layout />} key={root}>
+          <Route element={<Layout />} path={root} key={root}>
             {children.map(({ path, Component }) => (
               <Route path={path} element={<Component />} key={path} />
             ))}

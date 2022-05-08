@@ -4,6 +4,7 @@ export enum ROUTES {
   AUTH = 'auth',
   SIGN_IN = 'sign-in',
   SIGN_UP = 'sign-up',
+  HOME = 'home',
   FORGOT_PASSWORD = 'forgot-password',
   TEST = 'test',
   ANY = '*',
