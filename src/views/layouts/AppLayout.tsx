@@ -6,14 +6,20 @@ import Sidebar from './app/Sidebar';
 
 const AppLayout: FC = () => {
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box
+      sx={{
+        display: 'flex',
+        backgroundColor: '#f2f2f2',
+        minHeight: '100vh',
+      }}
+    >
       <Header />
-      <Box sx={{ width: { sm: 200 }, flexShrink: { sm: 0 } }}>
+      <Box sx={{ width: { sm: 250 }, flexShrink: { sm: 0 } }}>
         <Sidebar />
       </Box>
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${200}px)` } }}
+        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${250}px)` } }}
       >
         <Toolbar />
         <Outlet />

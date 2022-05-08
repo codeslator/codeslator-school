@@ -5,14 +5,10 @@ import {
   Toolbar,
   useMediaQuery,
   Box,
-  List,
-  ListItem,
-  Avatar,
-  ListItemText,
-  ListItemAvatar,
   useTheme,
+  Badge,
 } from '@mui/material';
-import { Menu, KeyboardArrowDown } from '@mui/icons-material';
+import { Menu, Logout, Notifications } from '@mui/icons-material';
 import { useUI } from '../../../hooks';
 
 const Header: FC = () => {
@@ -41,27 +37,33 @@ const Header: FC = () => {
               <Menu />
             </IconButton>
           )}
-          {/* <Box display="flex" flexDirection="row" justifyContent="center" alignItems="center">
-            <List sx={{ width: '100%', maxWidth: 360, padding: 0 }}>
-              <ListItem sx={{ padding: 0 }}>
-                <ListItemText primary="John Doe" secondary="Admin" sx={{ textAlign: 'right' }} />
-                <ListItemAvatar sx={{ ml: '10px' }}>
-                  <Avatar>JD</Avatar>
-                </ListItemAvatar>
-              </ListItem>
-            </List>
-            <Box>
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                // edge="end"
-                // onClick={handleDrawerToggle}
-                // sx={{ mr: 2 }}
+          <Box display="flex" flexDirection="row" justifyContent="center" alignItems="center">
+            <IconButton
+              color="inherit"
+              // edge="end"
+              // onClick={handleDrawerToggle}
+              sx={{ ml: '5px' }}
+            >
+              <Badge
+                color="secondary"
+                badgeContent="1"
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
               >
-                <KeyboardArrowDown />
-              </IconButton>
-            </Box>
-          </Box> */}
+                <Notifications />
+              </Badge>
+            </IconButton>
+            <IconButton
+              color="inherit"
+              // edge="end"
+              // onClick={handleDrawerToggle}
+              sx={{ ml: '5px' }}
+            >
+              <Logout />
+            </IconButton>
+          </Box>
         </Box>
       </Toolbar>
     </AppBar>

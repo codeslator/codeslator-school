@@ -25,6 +25,12 @@ export const routes: RouteParent[] = [
     Layout: AppLayout,
     children: [
       { path: ROUTES.HOME, Component: TestPage },
+      { path: ROUTES.DASHBOARD, Component: TestPage },
+      { path: ROUTES.TEACHERS, Component: TestPage },
+      { path: ROUTES.STUDENTS, Component: TestPage },
+      { path: ROUTES.SETTINGS, Component: TestPage },
+      { path: ROUTES.PAYMENTS, Component: TestPage },
+      { path: ROUTES.SCHEDULE, Component: TestPage },
       // { path: '*', Component: <Navigate to="/404" /> }
     ]
   },
